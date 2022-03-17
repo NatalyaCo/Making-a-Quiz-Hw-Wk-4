@@ -1,16 +1,16 @@
 
-.body{
-background:  rgb(73, 73, 95);
-};
-
-.start_btn {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+.body {
+    background: rgb(73, 73, 95);
 }
 
+
+
+
 .start_btn button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 25px;
     font-weight: 500;
     color: brown;
@@ -18,5 +18,79 @@ transform: translate(-50%, -50%);
     outline: 5px;
     border: 7px;
     border-radius: 17%;
-    
+    background: wheat;
+    cursor: pointer;
+
+}
+
+.info_box {
+
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    width: 540px;
+    background: gray;
+    border-radius: 3%
+}
+
+.info_box .info_title {
+    height: 70px;
+    width: 100%;
+    border: 3px solid salmon;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.info_box .info_list {
+    padding: auto;
+}
+
+.info_box .info_list .info {
+    margin: 5px;
+    font-size: 35px;
+
+}
+
+.info_box .info_list .info span {
+    font-weight: bolder;
+    color: mediumseagreen;
+}
+
+.info_box .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    padding: 19px;
+    background: coral;
+
+}
+
+.info_box .buttons button {
+    margin: 7px;
+    height: 40px;
+    width: 200px;
+
+    border-radius: 5px;
+    color: antiquewhite;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.buttons button.quit {
+    color: blue;
+    border-color: darkblue;
+}
+
+.buttons button.restart {
+    color: blue;
+    border-color: darkblue;
 }
