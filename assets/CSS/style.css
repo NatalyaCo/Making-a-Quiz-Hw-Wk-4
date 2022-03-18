@@ -4,8 +4,40 @@
 }
 
 
+.quiz_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    background: antiquewhite;
+}
 
+.quiz_box header {
+    height: 70px;
+    padding: 0 30px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px brown;
+}
 
+.quiz_box header .title{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.quiz_box header .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: lightseagreen;
+    border: 3px solid plum;
+}
 .start_btn button {
     position: absolute;
     top: 50%;
