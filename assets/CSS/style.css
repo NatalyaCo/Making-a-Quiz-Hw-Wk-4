@@ -173,7 +173,9 @@ footer .total_que span p{
     box-shadow: 0px 6px 20px 0 black(0,0,0,0.19);
 
 }
-.info_box.activeInfo{
+.info_box.activeInfo,
+.quiz_box.activeQuiz
+{
     z-index: 5;
     opacity: 1;
     pointer-events: auto;
@@ -238,7 +240,7 @@ footer .total_que span p{
     margin: 7px;
     height: 40px;
     width: 200px;
-
+    outline: none;
     border-radius: 5px;
     color: antiquewhite;
     font-size: 20px;
@@ -273,6 +275,10 @@ footer .total_que span p{
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 black(0,0,0,0.2);
+    box-shadow: 0px 6px 20px 0 black(0,0,0,0.19);
+    transition: all 0.3s ease;
+
 
 }
 
