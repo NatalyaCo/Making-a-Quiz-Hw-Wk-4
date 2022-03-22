@@ -9,7 +9,7 @@ var que_numb = 1;
 var counter;
 var timeValue = 75;
 var userScore = 0;
-var select_button = document.querySelectorAll(".Select")
+
 
 
 
@@ -24,26 +24,6 @@ exit_btn.onclick = () => {
     info_box.classList.remove("activeInfo");
 }
 
-
-select_button
- for (let i = 0; i < select_button.length; i++) {select_button[i].addEventListener ("click", ()=>  {
-    if (que_count < questions.length - 1) {
-        que_count++;
-        que_numb++;
-      //showQuestions(que_count);
-        questCounter(que_numb);
-       //startTimer(timeCount);
-     } else {
-        console.log("Questions Completed");
-       //showResultsBox();
-     }
-
-} )
-   
-
-}
-
-
 function showQuestions(index) {
     var que_text = document.querySelector(".que_text");
     var option_list = document.querySelector(".option_list");
@@ -56,7 +36,7 @@ function showQuestions(index) {
     option_list.innerHTML = options_tag;
     const option = option_list.querySelectorAll(".option");
     for (let i = 0; index < option_list.length; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)");
+        option[i].addEventListener("click", "optionSelected(option [i])");
     }
 
 }
@@ -76,10 +56,11 @@ function startTimer(time) {
     function timer() {
         timeCount.textContent = time;
         time--;
-        if (time > 0) {
+        if (time < 0) {
             clearInterval(counter);
-            timeCount.textContent = "75";
+            timeCount.textContent = "END";
         }
+
     }
 }
 
@@ -87,14 +68,14 @@ continue_btn.onclick = () => {
 
     info_box.classList.remove("activeInfo");
     quiz_box.classList.add("activeQuiz");
-    
-    
+
+
     //showQuestions(0);
     //questCounter(1);
     startTimer(75);
     showQuestions(0);
     questCounter(que_numb);
-    startTimer(timeCount);
+    //startTimer(timeValue);
 }
 
 
@@ -110,8 +91,8 @@ restart_quiz.onclick = () => {
     //let timeValue = 75;
     //let userScore = 0;
     showQuestions(que_count);
-        questCounter(que_numb);
-        //startTimer(timeValue);
+    questCounter(que_numb);
+    //startTimer(timeValue);
 
 }
 
@@ -122,15 +103,26 @@ quit_quiz.onclick = () => {
 
 //var que_text = document.querySelector(".que_text")
 
- 
 
- 
+
+
 function optionSelected(answer) {
     startTimer(timeValue);
     var userAns = answer.textContent;
     var correctAns = questions[que_count].answer;
-    var allOptions = option.list.chidren.length;
-    u
+    var allOptions = option.list.children.length;
+    var select_button = document.querySelectorAll(".Select")
+
+
+    for (let i = 0; i < select_button.length; i++) {
+        select_button[i].addEventListener("click", () => {
+
+
+        })
+
+
+    }
+
     if (userAns === correctAns) {
         userScore += 1;
         console.log(userScore);
@@ -139,12 +131,22 @@ function optionSelected(answer) {
     } else {
         answer.classList.add("Incorrect")
         console.log("Answer is Incorrect")
-        timeCount =-10;
+        timeCount = -10;
     }
 
     for (let i = 0; i < allOptions; i++) {
-        option_list.chidren[i].classList.add("disabled");
+        option_list.children[i].classList.add("disabled");
 
+    }
+    if (que_count < questions.length - 1) {
+        que_count++;
+        que_numb++;
+        //showQuestions(que_count);
+        questCounter(que_numb);
+        //startTimer(timeCount);
+    } else {
+        console.log("Questions Completed");
+        //showResultsBox();
     }
 
 
@@ -166,7 +168,7 @@ function optionSelected(answer) {
         }
     }
 
-    
-showResultsBox();
-    
-} 
+
+    showResultsBox();
+
+}
