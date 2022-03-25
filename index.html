@@ -32,13 +32,13 @@
 
 <div class="timer">
 <div class="time_text">Time Left</div>
-<div class="timer_sec">15</div>
+<div class="timer_sec"></div>
 
 
 </div>
 </header>
 
-<section>
+<section id="question-section">
     <div class="que_text">
         <span>is the Fear of What?</span>
     </div>
@@ -69,12 +69,18 @@
 </section>
 
 <footer>
+    <div class="initialSection hide">
+        Enter Your Initial: <input type="text" id="inital-input">
+        <button id="savebtn" >save</button>
+    </div>
     <div class="total_que">
-        <span><p>2</p><p>Of</p><p>5</p><p>questions</p></span>
+        <span><p id="right-answer">2</p><p>Of</p><p>5</p><p>questions</p></span>
     </div>
 
 </footer>
 </div>
+
+
 
 <div class="results_box">
 
@@ -98,10 +104,11 @@
 
 
 
-</div>
 
-<script src="./assets/JS/script.js"></script>
+</div>
 <script src="./assets/JS/questions.js"></script>
+<script src="./assets/JS/script.js"></script>
+
 
 </body>
 </html>
