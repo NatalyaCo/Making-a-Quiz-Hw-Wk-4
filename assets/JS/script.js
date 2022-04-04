@@ -184,7 +184,7 @@ function optionSelected(answer) {
 
 
    
-    showResultsBox();
+   
 
 }
 
@@ -205,4 +205,4 @@ function showResultsBox() {
         scoreText.innerHTML = scoreTag;
     }
 }
-
+ showResultsBox();
